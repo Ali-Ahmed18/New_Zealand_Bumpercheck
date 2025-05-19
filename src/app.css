@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+html{
+  overflow-x: hidden;
+}
+::selection {
+  background-color: #00bce2; 
+  color: white; 
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  background-color: #00bce2;
+  width: 30px;
+  border-radius: 0;
+  height: 3px;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after,
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  color: black;
+  background-color: white;
+  opacity: 1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  font-size: 20px;
+  padding: 20px 25px;
+  font-weight: bolder;
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .swiper-button-next:after,
+  .swiper-button-prev:after,
+  .swiper-button-next:after,
+  .swiper-rtl .swiper-button-prev:after {
+    display: none;
+  }
+}
+
+
+.footerLine::after {
+    animation: footerLine 7s linear infinite;
+}
+
+@keyframes footerLine {
+  0% {
+    left: 40px;
+  }
+
+  50% {
+    left: 0;
+  }
+
+  100% {
+    left: 40px;
+  }
+}
+
+.footerTire{
+  animation: footerTire 10s linear infinite;
+}
+@keyframes footerTire {
+  0% {
+    top: -6rem;
+  }
+
+  50% {
+    top: 0rem;
+  }
+
+  100% {
+    top: -6rem;
+  }
+}
